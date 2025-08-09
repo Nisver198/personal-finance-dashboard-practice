@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 Personal Finance Tracker</h1>
+            <p>Take charge of your own finances!</p>
+        </header>
+
+        <div class="dashboard">
+            <div class="card balance">
+                <h3>Current Balance</h3>
+                <div class="amount" id="balance">$0.00</div>
+            </div>
+            <div class="card income">
+                <h3>Total Income</h3>
+                <div class="amount" id="total-income">$0.00</div>
+            </div>
+            <div class="card expense">
+                <h3>Total Expenses</h3>
+                <div class="amount" id="total-expenses">$0.00</div>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Add New Transaction</h2>
+            <form id="transaction-form">
+                <div class="form-row">
+                    <input type="text" id="description" placeholder="Reason for transaction?" required>
+                    <input type="number" id="amount" placeholder="Amount" step="0.01" required>
+                </div>
+                <div class="form-row">
+                    <select id="type" required>
+                        <option value="">Income or Expense?</option>
+                        <option value="income">💰 Income</option>
+                        <option value="expense">💸 Expense</option>
+                    </select>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="salary">💼 Salary</option>
+                        <option value="freelance">💻 Freelance</option>
+                        <option value="food">🍕 Food</option>
+                        <option value="transport">🚗 Transport</option>
+                        <option value="entertainment">🎬 Entertainment</option>
+                        <option value="utilities">💡 Utilities</option>
+                        <option value="shopping">🛍️ Shopping</option>
+                        <option value="education">📚 Education</option>
+                        <option value="other">📦 Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="add-btn">Add Transaction</button>
+            </form>
+        </div>
+
+        <div class="transactions-section">
+            <h2>Transaction History</h2>
+            <div id="transactions-list">
+                <p class="no-transactions">No transactions yet. Add your first transcation now!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
